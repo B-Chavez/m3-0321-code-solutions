@@ -1,0 +1,34 @@
+button{
+    color: white;
+    padding: 50px;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hot1{
+    background-color: darkmagenta;
+}
+
+.hot2{
+    background-color: purple;
+}
+
+.hot3{
+    background-color: salmon;
+}
+
+.hot4{
+    background-color: orange;
+    color: black;
+}
+
+.hot5{
+    background-color: yellow;
+    color: black;
+}
+
+.hot6{
+    background-color: white;
+    color: black;
+}
