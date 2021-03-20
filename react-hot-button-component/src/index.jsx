@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CustomButton from 'hot-button';
+import CustomButton from './hot-button';
 
 ReactDOM.render(
     <CustomButton />,

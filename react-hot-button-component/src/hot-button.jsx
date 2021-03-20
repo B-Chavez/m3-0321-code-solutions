@@ -18,20 +18,15 @@ class CustomButton extends React.Component {
 
     if(this.state.count >= 18){
         buttonClass = 'hot6';
-    }
-    if(this.state.count >= 15){
+    } else if(this.state.count >= 15){
         buttonClass = 'hot5';
-    }
-    if(this.state.count >= 12){
+    } else if(this.state.count >= 12){
         buttonClass = 'hot4';
-    }
-    if(this.state.count >= 9){
+    } else if(this.state.count >= 9){
         buttonClass = 'hot3';
-    }
-    if(this.state.count >= 6){
+    } else if(this.state.count >= 6){
         buttonClass = 'hot2';
-    }
-    if(this.state.count >= 3){
+    } else if(this.state.count >= 3){
         buttonClass = 'hot1'
         
     }
