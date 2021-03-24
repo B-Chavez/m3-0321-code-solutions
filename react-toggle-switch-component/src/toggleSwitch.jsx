@@ -3,28 +3,33 @@ import React from 'react';
 class ToggleSwitch extends React.Component {
     constructor(props){
         super(props)
-        this.state = {clicked: false, classColor: 'default', onOff: 'On'}
+        this.state = {onOff: 'On'}
         this.toggle = this.toggle.bind(this);
     }
 
     toggle(){
-        if(this.state.clicked === true){
-            this.state.clicked = false;
+        if(this.state.onOff === 'On'){
             this.setState({
-                onOff:'Off', classColor: 'black'
+                onOff:'Off'
             })
         } else {
-            this.state.clicked = true;
             this.setState({
-                onOff:'On', classColor: 'default'
+                onOff:'On'
             })
         }
     }
 
     render(){
+        let classColor = 'default';
+
+        if (this.state.onOff === 'Off') {
+        classColor = 'black';
+        } else {
+            classColor = 'default';
+        }
        return(
            <div>
-            <button onClick={this.toggle} className={this.state.classColor}>{this.state.onOff}</button>
+            <button onClick={this.toggle} className={classColor}>{this.state.onOff}</button>
         </div>
        ) 
         
