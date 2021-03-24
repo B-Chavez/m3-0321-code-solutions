@@ -24,8 +24,6 @@ class ToggleSwitch extends React.Component {
 
         if (this.state.onOff === 'Off') {
         classColor = 'black';
-        } else {
-            classColor = 'default';
         }
        return(
            <div>
