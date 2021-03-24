@@ -25,7 +25,7 @@ class Stopwatch extends React.Component {
         console.log(this.state.seconds);        
         return (
             <div>
-                <div>{this.state.seconds} Seconds</div>
+                <div id="main">{this.state.seconds} Seconds</div>
                 <button onClick={this.trigger}>Start</button>
                 <button onClick={this.clearTimer}>Stop</button>
             </div>
