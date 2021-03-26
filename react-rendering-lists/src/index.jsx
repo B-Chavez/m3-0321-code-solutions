@@ -10,9 +10,9 @@ const pokedex = [
   ];
 
   const pokeList = pokedex.map(x => 
-    <li>{x.number} {x.name}</li>
+    <li>{x.name}</li>
   )
 ReactDOM.render(
-    <div>{pokeList}</div>,
+    <ul>{pokeList}</ul>,
     document.querySelector('#root')
 )
