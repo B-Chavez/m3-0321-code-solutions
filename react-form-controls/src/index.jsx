@@ -11,13 +11,14 @@ class NewsletterForm extends React.Component{
     }
 
     handleChange(event){
+        const value = event.target.value;
         this.setState({
-            email: event
+            email: value
         });
     }
 
     handleSubmit(event){
-        console.log("Email:", this.state.email.target.value);
+        console.log("state:", this.state);
         event.preventDefault();
     }
 
@@ -27,7 +28,7 @@ class NewsletterForm extends React.Component{
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Email
-                    <input type="text" onChange={this.handleChange}/>
+                    <input type="text" onChange={this.handleChange} value={this.state.email}/>
                 </label>
                 <input type="submit" value="Submit" />
             </form>
