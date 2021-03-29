@@ -29,7 +29,7 @@ class ValidatedInput extends React.Component{
         <div className="container">
           <form>
             <label>
-              <input type="text" onChange={this.validateText}/>
+              <input type="password" onChange={this.validateText}/>
             </label>
           </form>
           <div className={this.state.icon}></div>
