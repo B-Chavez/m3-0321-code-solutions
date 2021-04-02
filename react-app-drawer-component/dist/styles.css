@@ -1,0 +1,62 @@
+.hidden {
+  display: none;
+}
+
+.hamburgerMenu {
+  height: 100vh;
+  width: 400px;
+  background-color: yellowgreen;
+  margin-left: -8px;
+}
+
+#hamburgerMenu {
+  background-image: url('./assets/times-solid.svg');
+  height: 50px;
+  width: 34px;
+  margin-left: 100px;
+}
+
+.closed {
+  display: none;
+}
+
+.open {
+  width: 250px;
+  color: white;
+  height: 100vh;
+  margin-left: -8px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(73, 73, 73);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#hamburgerMenuOutside {
+  background-image: url(./assets/bars-solid.svg);
+  height: 50px;
+  width: 50px;
+}
+
+li :hover {
+  color: white;
+}
+
+#overlayDisplay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#overlay {
+  display: none;
+}
