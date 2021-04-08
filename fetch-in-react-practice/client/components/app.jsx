@@ -43,6 +43,11 @@ export default class App extends React.Component {
     headers: {"Content-type": "application/json; charset=UTF-8"}
   })
    .then(response => response.json())
+   .then(todo => {
+     const todoCopy = Array.from(this.state.todos);
+     todoCopy.push(todo);
+     this.setState({todos: todoCopy})
+   })
    .then(json => console.log(json))
   }
   toggleCompleted(todoId) {
@@ -60,7 +65,7 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-    const todoCopy = this.state.todos;
+    const todoCopy = Array.from(this.state.todos);
     const index = todoCopy.findIndex(e => e.todoId === todoId )
     let completed = todoCopy[index].isCompleted;
     if(todoCopy[index].isCompleted === false){
