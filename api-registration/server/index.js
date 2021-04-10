@@ -37,23 +37,23 @@ app.post('/api/auth/sign-up', (req, res, next) => {
    *
    * Hint: Insert statements can include a `returning` clause to retrieve the insterted row(s).
    */
-  const sql = `insert into "users" ("username", "hashedPassword")
-                values ($1, $2)
-                returning *
-                `
-  const params = [req.body.username, req.body.hashedPassword]
-argon2.hash("password")
-.then(data =>
-  params[1] = data
-)
-
-db.query(sql, params)
-    .then(result => {
-      const userPass = result.rows;
-      res.status(201).json(userPass);
+argon2.hash(req.body.password)
+  .then(data => {
+    const sql = `insert into "users" ("username", "hashedPassword")
+                  values ($1, $2)
+                  returning *
+                  `
+    const params = [req.body.username, data]
+    db.query(sql, params)
+      .then(result => {
+        const userPass = result.rows;
+        res.status(201).json(userPass);
+      })
+      .catch(err => next(err))
     })
-    .catch(err => next(err))
-});
+  .catch(err => next(err))
+})
+
 
 app.use(errorMiddleware);
 
