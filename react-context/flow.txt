@@ -1,0 +1,15 @@
+User can sign up:
+  -the user makes a post request at the server with a username and password
+  -the username and password are stored in a database using argon2 to create a hash for the password
+  -the server returns that userId, username, and createdAt
+
+User can sign in:
+  -the user makes a post request at the server with a username and password
+  -the server selects and verifies the password based off of the hash compared to the input
+
+User can stay signed in (even if they refresh the page):
+  - react-context-jwt holds on to the token
+
+User can sign out
+  - handleSignOut is called
+  - react-context-jwt remove data
